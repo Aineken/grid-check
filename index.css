@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1rem minmax(200px, 250px) minmax(300px, 380px) 1rem;
+  grid-template-areas:
+    "header header side side"
+    "header header side side"
+    "main main main footer"
+    "main main main footer"
+    "main main main footer";
+}
+
+header,
+.main,
+.side,
+footer {
+  padding: 2rem;
+}
+
+header {
+  background-color: firebrick;
+  grid-area: header;
+}
+.side {
+  background-color: green;
+  grid-area: side;
+}
+.main {
+  background-color: bisque;
+  grid-area: main;
+}
+
+footer {
+  background-color: blueviolet;
+  grid-area: footer;
+}
